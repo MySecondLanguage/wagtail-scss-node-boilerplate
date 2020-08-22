@@ -1,0 +1,26 @@
+{% load static compress %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}">
+
+    {% compress css %}
+    <link type="text/x-scss" href="{% static 'scss/style.scss' %}" rel="stylesheet" media="screen">
+  {% endcompress %}
+
+</head>
+<body>
+
+<div class="container">
+  <p class="alert-success">A boilerplace for wagtail that included scss, node-module and all busic setup</p>
+
+    <p class="test-sass"> test SCSS</p>
+  </div>
+</div>
+
+</body>
+<script src="{% static 'popper.js/dist/umd/popper.min.js' %}"></script>
+<script src="{% static 'jquery/dist/jquery.min.js' %}"></script>
+<script src="{% static 'bootstrap/dist/js/bootstrap.min.js' %}"></script>
+</html>

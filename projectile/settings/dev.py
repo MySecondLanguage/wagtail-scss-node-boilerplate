@@ -1,10 +1,13 @@
 from .base import *
+from dotenv import load_dotenv
+load_dotenv()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '*w(lj4-(e6c^sgqv8o3yq4!$y%8mqvy3il6kp+0vj#9e!5s1b-'
+# SECRET_KEY = '*w(lj4-(e6c^sgqv8o3yq4!$y%8mqvy3il6kp+0vj#9e!5s1b-'
+SECRET_KEY = os.getenv("secret_key")
 
 # SECURITY WARNING: define the correct hosts in production!
 ALLOWED_HOSTS = ['*'] 

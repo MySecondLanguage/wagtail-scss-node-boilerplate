@@ -47,7 +47,7 @@ sudo systemctl status gunicorn
 ```
 
 
-##E for nginx
+### for nginx
 ```
 sudo gedit /etc/nginx/sites-available/projectile.conf
 sudo rm -rf /etc/nginx/sites-enabled/default

@@ -2,3 +2,4 @@ db_user=postgres
 db_name=tape
 db_password=postgres
 db_host=localhost
+secret_key=*w(lj4-(e6c^sgqv8o3yq4!$y%8mqvy3il6kp+0vj#9e!5s1b-

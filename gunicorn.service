@@ -1,0 +1,14 @@
+[Unit]
+Description=gunicorn daemon
+After=network.target
+
+[Service]
+User=root
+Group=www-data
+
+WorkingDirectory=/var/www/projectile
+Environment="PATH=/var/www/projectile/env/bin"
+ExecStart=/var/www/projectile/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/var/www/projectile/config.sock -m 007 projectile.wsgi:application
+
+[Install]
+WantedBy=multi-user.target

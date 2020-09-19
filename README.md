@@ -30,3 +30,30 @@ and then setup `.env` file. please follow `backupenv` It's added to show you exa
 
 Always place the `.env` file the base directory of the project
 
+
+
+# Deployment
+
+
+## a few very usefull commands to take idea:
+
+### for gunicorn
+
+```
+sudo gedit /etc/systemd/system/gunicorn.service
+sudo systemctl start gunicorn
+sudo systemctl enable gunicorn
+sudo systemctl status gunicorn
+```
+
+
+##E for nginx
+```
+sudo gedit /etc/nginx/sites-available/projectile.conf
+sudo rm -rf /etc/nginx/sites-enabled/default
+sudo ln -s /etc/nginx/sites-available/projectile.conf /etc/nginx/sites-enabled/projectile.conf
+sudo nginx -t
+sudo systemctl restart nginx
+sudo ufw allow 'Nginx Full'
+```
+
